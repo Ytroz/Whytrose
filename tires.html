@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fremburg Tires - Premium Tires for Every Vehicle</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #FF6B00;
+            --secondary-color: #333333;
+            --accent-color: #0056B3;
+            --light-color: #F8F9FA;
+            --dark-color: #212529;
+            --text-color: #444444;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: white;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            /* color: var(--dark-color); */
+        }
+        
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: var(--secondary-color) !important;
+            margin: 0 8px;
+            padding: 8px 15px !important;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: white !important;
+            background-color: var(--primary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #E05E00;
+            border-color: #E05E00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+        }
+        
+        .hero-section {
+            background:url('/tire\ production.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="white"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="white"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="white"></path></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .feature-box {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            height: 100%;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 107, 0, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            background: rgba(255, 107, 0, 0.1);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .feature-box:hover .feature-icon {
+            background: var(--primary-color);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .tire-card {
+            border: none;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .tire-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tire-card img {
+            height: 220px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .tire-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .tire-card .card-body {
+            padding: 25px;
+        }
+        
+        .tire-card .badge {
+            background-color: var(--primary-color);
+            font-weight: 500;
+            padding: 5px 12px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 2;
+        }
+        
+        .tire-card .price {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin: 15px;
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(255, 107, 0, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+            z-index: 0;
+        }
+        
+        .testimonial-card .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-card .rating {
+            color: #FFC107;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-card .client-info {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .testimonial-card .client-info img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid rgba(255, 107, 0, 0.2);
+        }
+        
+        .contact-info-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        
+        .contact-info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 107, 0, 0.2);
+        }
+        
+        .contact-info-box i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            background: rgba(255, 107, 0, 0.1);
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .contact-info-box:hover i {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .newsletter-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+        
+        .newsletter-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .newsletter-form .form-control {
+            height: 60px;
+            border-radius: 4px;
+            border: none;
+            padding: 0 20px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form .btn {
+            height: 60px;
+            border-radius: 4px;
+            font-weight: 600;
+            padding: 0 30px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            height: 40px;
+        }
+        
+        .footer-about {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h5 {
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h5::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            margin-top: 50px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(255, 107, 0, 0.3);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--dark-color);
+            transform: translateY(-5px);
+        }
+        
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+        }
+        
+        .slide-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .slide-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 {
+            transition-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            transition-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            transition-delay: 0.6s;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .hero-section {
+                padding: 120px 0 80px;
+                background-attachment: scroll;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                margin-bottom: 40px;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/tire.jpg" alt="Fremburg Tires" width="30%" height="80%">
+                <h1>Fremburg Tires</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-primary ms-lg-3">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-content">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h1 class="hero-title slide-up">Drive With Confidence On Premium Tires</h1>
+                    <p class="hero-subtitle slide-up delay-1">Experience unmatched performance, safety, and durability with Fremburg's advanced tire technology designed for all road conditions.</p>
+                    <div class="d-flex justify-content-center gap-3 slide-up delay-2">
+                        <a href="#products" class="btn btn-primary btn-lg px-4">Shop Tires</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg px-4">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 fade-in">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Advanced Safety</h3>
+                        <p>Our tires feature cutting-edge safety technology with superior traction and braking performance in all weather conditions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in delay-1">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>Peak Performance</h3>
+                        <p>Engineered for responsive handling, precise steering, and high-speed stability without compromising comfort.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 fade-in delay-2">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Eco-Conscious</h3>
+                        <p>Manufactured with sustainable materials and processes to minimize environmental impact while maximizing efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Our Premium Tire Collection</h2>
+            <p class="text-center mb-5">Engineered for excellence across all vehicle types and driving conditions</p>
+            
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-6 slide-up">
+                    <div class="tire-card">
+                        <span class="badge">Bestseller</span>
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="All-Season Tire">
+                        <div class="card-body">
+                            <h5 class="card-title">All-Season Pro</h5>
+                            <p class="card-text">Year-round performance with exceptional wet and dry traction for passenger vehicles.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="price">$129.99</span>
+                                <button class="btn btn-sm btn-outline-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-6 slide-up delay-1">
+                    <div class="tire-card">
+                        <img src="https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Winter Tire">
+                        <div class="card-body">
+                            <h5 class="card-title">Winter Master XT</h5>
+                            <p class="card-text">Superior snow and ice traction with advanced tread design for maximum winter safety.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="price">$149.99</span>
+                                <button class="btn btn-sm btn-outline-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-6 slide-up delay-2">
+                    <div class="tire-card">
+                        <span class="badge">New</span>
+                        <img src="/tire production.jpg" class="card-img-top" alt="Performance Tire">
+                        <div class="card-body">
+                            <h5 class="card-title">Performance Ultra</h5>
+                            <p class="card-text">High-speed rated tires for sports cars with exceptional cornering stability and grip.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="price">$179.99</span>
+                                <button class="btn btn-sm btn-outline-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-6 slide-up delay-3">
+                    <div class="tire-card">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" class="card-img-top" alt="SUV Tire">
+                        <div class="card-body">
+                            <h5 class="card-title">SUV Terrain Pro</h5>
+                            <p class="card-text">Rugged all-terrain tires for SUVs and light trucks with enhanced off-road capability.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <span class="price">$159.99</span>
+                                <button class="btn btn-sm btn-outline-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 slide-up delay-3">
+                <a href="#" class="btn btn-primary px-4">Browse All Tires</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="text-center section-title">Our Professional Services</h2>
+            <p class="text-center mb-5">Comprehensive tire services to keep your vehicle performing at its best</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Expert Installation</h3>
+                        <p>Professional tire mounting and balancing using state-of-the-art equipment for optimal performance.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 fade-in delay-1">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Rotation & Alignment</h3>
+                        <p>Extend tire life and improve fuel efficiency with our precision rotation and alignment services.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 fade-in delay-2">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-car-crash"></i>
+                        </div>
+                        <h3>Flat Repair</h3>
+                        <p>Quick and reliable flat tire repair services using industry-leading techniques and materials.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 fade-in delay-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck-pickup"></i>
+                        </div>
+                        <h3>Mobile Service</h3>
+                        <p>On-demand tire services at your location for ultimate convenience and time savings.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 fade-in">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1583&q=80" alt="About Fremburg Tires" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6 fade-in delay-1">
+                    <h2 class="section-title text-start">About Fremburg Tires</h2>
+                    <p>Since our founding in 1995, Fremburg Tires has been at the forefront of tire innovation, combining cutting-edge technology with decades of expertise to deliver superior products.</p>
+                    <p>We're committed to pushing the boundaries of tire performance while maintaining our core values of safety, reliability, and environmental responsibility.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle text-primary me-2"></i>
+                                <span>25+ Years Experience</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle text-primary me-2"></i>
+                                <span>1000+ Happy Customers</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle text-primary me-2"></i>
+                                <span>ISO Certified</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-check-circle text-primary me-2"></i>
+                                <span>Nationwide Service</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary mt-3">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center section-title">Customer Experiences</h2>
+            <p class="text-center mb-5">What drivers are saying about Fremburg Tires</p>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4 fade-in">
+                    <div class="testimonial-card h-100">
+                        <div class="content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="mb-4">"The All-Season Pro tires transformed my driving experience. Excellent grip in both wet and dry conditions, and they're surprisingly quiet on the highway."</p>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small>Business Owner</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 fade-in delay-1">
+                    <div class="testimonial-card h-100">
+                        <div class="content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="mb-4">"I've been using Fremburg tires for all my vehicles for years. Their durability is unmatched, and their customer service is exceptional."</p>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Rodriguez">
+                                <div>
+                                    <h6 class="mb-0">Michael Rodriguez</h6>
+                                    <small>Fleet Manager</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 fade-in delay-2">
+                    <div class="testimonial-card h-100">
+                        <div class="content">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="mb-4">"The Winter Master tires saved me during last year's snowstorm. I felt completely in control while others were sliding all over the road."</p>
+                            <div class="client-info">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Chen">
+                                <div>
+                                    <h6 class="mb-0">Emily Chen</h6>
+                                    <small>School Teacher</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Get In Touch</h2>
+            <p class="text-center mb-5">Contact us for inquiries or to schedule a service appointment</p>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4 fade-in">
+                    <div class="contact-info-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Our Location</h4>
+                        <p>123 Tire Street, Fremburg, FB 12345</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3">Get Directions</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 fade-in delay-1">
+                    <div class="contact-info-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Call Us</h4>
+                        <p>+1 (800) 555-1234</p>
+                        <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
+                        <a href="tel:+18005551234" class="btn btn-sm btn-outline-primary mt-3">Call Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4 fade-in delay-2">
+                    <div class="contact-info-box">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email Us</h4>
+                        <p>info@fremburgtires.com</p>
+                        <p>support@fremburgtires.com</p>
+                        <a href="mailto:info@fremburgtires.com" class="btn btn-sm btn-outline-primary mt-3">Send Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4 mb-lg-0 fade-in">
+                    <div class="map-container rounded shadow overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215373510502!2d-73.9878449241646!3d40.75798597138943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1689876915837!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 fade-in delay-1">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Send Us a Message</h4>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Your Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="" selected disabled>Select a subject</option>
+                                        <option value="product-inquiry">Product Inquiry</option>
+                                        <option value="service-request">Service Request</option>
+                                        <option value="quote">Request a Quote</option>
+                                        <option value="general">General Question</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container newsletter-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 slide-up">
+                    <h3 class="mb-3">Stay Updated With Fremburg</h3>
+                    <p class="mb-0">Subscribe to our newsletter for the latest tire technologies, promotions, and maintenance tips.</p>
+                </div>
+                <div class="col-lg-6 slide-up delay-1">
+                    <form class="newsletter-form d-flex">
+                        <input type="email" class="form-control" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-logo">
+                        <img src="/tire.jpg" alt="Fremburg Tires">
+                    </div>
+                    <div class="footer-about">
+                        <p>Fremburg Tires is a leading innovator in tire technology, committed to delivering superior performance, safety, and sustainability across all our products and services.</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h5>Products</h5>
+                        <ul>
+                            <li><a href="#">Passenger Tires</a></li>
+                            <li><a href="#">SUV/Truck Tires</a></li>
+                            <li><a href="#">Winter Tires</a></li>
+                            <li><a href="#">Performance Tires</a></li>
+                            <li><a href="#">All-Terrain Tires</a></li>
+                            <li><a href="#">Commercial Tires</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h5>Services</h5>
+                        <ul>
+                            <li><a href="#">Tire Installation</a></li>
+                            <li><a href="#">Wheel Alignment</a></li>
+                            <li><a href="#">Tire Rotation</a></li>
+                            <li><a href="#">Flat Repair</a></li>
+                            <li><a href="#">Tire Balancing</a></li>
+                            <li><a href="#">Mobile Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2023 Fremburg Tires. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">
+                            <a href="#" class="me-3">Privacy Policy</a>
+                            <a href="#" class="me-3">Terms of Service</a>
+                            <a href="#">Sitemap</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.querySelector('.navbar-brand img').style.height = '35px';
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.querySelector('.navbar-brand img').style.height = '40px';
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('active');
+            } else {
+                backToTopButton.classList.remove('active');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                        bsCollapse.hide();
+                    }
+                }
+            });
+        });
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in, .slide-up');
+            const windowHeight = window.innerHeight;
+            const triggerPoint = windowHeight * 0.8;
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                
+                if (elementPosition < triggerPoint) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Initialize animations
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send the data to a server
+                // For this example, we'll just show an alert
+                alert(`Thank you, ${name}! Your message about "${subject}" has been received. We'll contact you at ${email} soon.`);
+                
+                // Reset the form
+                contactForm.reset();
+            });
+        }
+        
+        // Product card hover effect enhancement
+        const tireCards = document.querySelectorAll('.tire-card');
+        tireCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.querySelector('img').style.transform = 'scale(1.05)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.querySelector('img').style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

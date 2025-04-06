@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fremburg Real Estate | Luxury Properties & Homes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/RE.css    ">
+</head>
+<body>
+    <!-- Hero Section with Background Image -->
+    <section class="hero-section">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html">
+                    <span class="fw-bold text-white">FREM</span><span class="text-warning">BURG</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="propertiesDropdown">Properties</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">For Sale</a></li>
+                                <li><a class="dropdown-item" href="#">For Rent</a></li>
+                                <li><a class="dropdown-item" href="#">Luxury Homes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Agents</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#jobPortalModal">
+                                <span class="badge bg-warning text-dark">We're Hiring</span> Careers
+                            </a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-outline-light rounded-pill px-4" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="row align-items-center min-vh-80">
+                    <div class="col-lg-7 text-white">
+                        <h1 class="display-3 fw-bold mb-4">Discover Your Perfect <span class="text-warning">Dream Home</span></h1>
+                        <p class="lead mb-5">Fremburg Real Estate brings you the finest selection of luxury properties in the most desirable locations.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#" class="btn btn-warning btn-lg px-4 rounded-pill">Explore Properties</a>
+                            <a href="#" class="btn btn-outline-light btn-lg px-4 rounded-pill">Virtual Tours</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Box -->
+        <div class="search-container">
+            <div class="container">
+                <div class="search-box bg-white p-4 rounded shadow-lg">
+                    <ul class="nav nav-pills mb-4" id="searchTab">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#buy-tab">Buy</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#rent-tab">Rent</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#commercial-tab">Commercial</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="buy-tab">
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <select class="form-select">
+                                        <option>Property Type</option>
+                                        <option>House</option>
+                                        <option>Apartment</option>
+                                        <option>Villa</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select">
+                                        <option>Location</option>
+                                        <option>Downtown</option>
+                                        <option>Waterfront</option>
+                                        <option>Suburbs</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select">
+                                        <option>Bedrooms</option>
+                                        <option>1+</option>
+                                        <option>2+</option>
+                                        <option>3+</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select">
+                                        <option>Price Range</option>
+                                        <option>$200k - $500k</option>
+                                        <option>$500k - $1M</option>
+                                        <option>$1M+</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-warning w-100">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Other tab content would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="py-6 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">Featured Properties</h2>
+                    <p class="text-muted">Curated selection of premium homes and estates</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Property 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="property-card card h-100 border-0 overflow-hidden shadow-sm">
+                        <div class="property-badge bg-warning text-dark">Featured</div>
+                        <div class="property-thumb">
+                            <img src="/villa.jpg" class="card-img-top" alt="Luxury Villa">
+                            <div class="property-price">$1,250,000</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Modern Luxury Villa</h5>
+                            <p class="card-text text-muted">
+                                <i class="fas fa-map-marker-alt text-warning me-1"></i> Beverly Hills, CA
+                            </p>
+                            <div class="property-features d-flex justify-content-between">
+                                <span><i class="fas fa-bed me-1"></i> 4 Beds</span>
+                                <span><i class="fas fa-bath me-1"></i> 3 Baths</span>
+                                <span><i class="fas fa-vector-square me-1"></i> 3,200 sqft</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-dark w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="property-card card h-100 border-0 overflow-hidden shadow-sm">
+                        <div class="property-badge bg-success">New</div>
+                        <div class="property-thumb">
+                            <img src="/penthouse.webp" class="card-img-top" alt="Penthouse">
+                            <div class="property-price">$3,200/mo</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Downtown Penthouse</h5>
+                            <p class="card-text text-muted">
+                                <i class="fas fa-map-marker-alt text-warning me-1"></i> Manhattan, NY
+                            </p>
+                            <div class="property-features d-flex justify-content-between">
+                                <span><i class="fas fa-bed me-1"></i> 2 Beds</span>
+                                <span><i class="fas fa-bath me-1"></i> 2 Baths</span>
+                                <span><i class="fas fa-vector-square me-1"></i> 1,800 sqft</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-dark w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="property-card card h-100 border-0 overflow-hidden shadow-sm">
+                        <div class="property-badge bg-info">Waterfront</div>
+                        <div class="property-thumb">
+                            <img src="/beach house.jpg" class="card-img-top" alt="Beach House">
+                            <div class="property-price">$2,950,000</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Oceanfront Estate</h5>
+                            <p class="card-text text-muted">
+                                <i class="fas fa-map-marker-alt text-warning me-1"></i> Malibu, CA
+                            </p>
+                            <div class="property-features d-flex justify-content-between">
+                                <span><i class="fas fa-bed me-1"></i> 5 Beds</span>
+                                <span><i class="fas fa-bath me-1"></i> 4.5 Baths</span>
+                                <span><i class="fas fa-vector-square me-1"></i> 4,500 sqft</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-dark w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-warning px-4 py-3 rounded-pill">Browse All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Experience Section -->
+    <section class="luxury-experience py-6">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="luxury-content bg-white p-5 shadow-lg rounded">
+                        <h2 class="display-5 fw-bold mb-4">The Fremburg <span class="text-warning">Luxury</span> Experience</h2>
+                        <p class="lead mb-4">We redefine real estate by offering unparalleled service and access to the most exclusive properties.</p>
+                        <ul class="list-unstyled luxury-features">
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-warning me-2"></i> Personalized property matching
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-warning me-2"></i> Exclusive off-market listings
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-warning me-2"></i> Concierge relocation services
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle text-warning me-2"></i> Global network of luxury properties
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-dark mt-3 px-4 py-2 rounded-pill">Learn About Our Services</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="luxury-image rounded overflow-hidden shadow-lg">
+                        <img src="/Real-estate-website-design.jpg" alt="Luxury Interior" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-6 bg-dark text-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
+                    <p class="text-light">Trusted by homeowners and investors worldwide</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100 p-4 bg-dark-2 rounded">
+                        <div class="rating mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"Fremburg found us our dream home when we had almost given up. Their attention to detail and negotiation skills saved us over $200,000!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="/girl.jpg" class="rounded-circle me-3" width="50" alt="Client">
+                            <div>
+                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <small class="text-muted1">Homeowner</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100 p-4 bg-dark-2 rounded">
+                        <div class="rating mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"As an international investor, I rely on Fremburg's expertise to identify the best properties. Their market knowledge is unmatched."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="/smiley-man.avif" class="rounded-circle me-3" width="50" alt="Client">
+                            <div>
+                                <h6 class="mb-0">Michael Chen</h6>
+                                <small class="text-muted1">Real Estate Investor</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card h-100 p-4 bg-dark-2 rounded">
+                        <div class="rating mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="mb-4">"The entire team went above and beyond to make our relocation seamless. From finding schools to recommending contractors - exceptional service!"</p>
+                        <div class="d-flex align-items-center">
+                            <img src="/a man.jpg" class="rounded-circle me-3" width="50" alt="Client">
+                            <div>
+                                <h6 class="mb-0">Emily Rodriguez</h6>
+                                <small class="text-muted1">Relocating Family</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-6 bg-warning">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h3 class="display-6 fw-bold mb-3">Ready to Begin Your Property Journey?</h3>
+                    <p class="mb-0">Our expert advisors are standing by to assist you.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#" class="btn btn-dark btn-lg px-4 py-3 rounded-pill me-3">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-6 pb-4">
+        <div class="container-4">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h3 class="fw-bold mb-4">
+                        <span class="text2">FREM</span><span class="text-warning">BURG</span>
+                    </h3>
+                    <p class="text-muted mb-4">Premium real estate services with a global reach and local expertise.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <h5 class="fw-bold mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Our Team</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">News</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5 class="fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted">Property Sales</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Property Management</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Investment Advisory</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Relocation Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Valuation Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt text-warning me-2"></i> 
+                            100 Luxury Lane, Fremburg, CA 90210
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone-alt text-warning me-2"></i> 
+                            +1 (555) 123-4567
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope text-warning me-2"></i> 
+                            info@fremburgrealestate.com
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-clock text-warning me-2"></i> 
+                            Mon-Sat: 9am - 7pm
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 text-muted">&copy; 2023 Fremburg Real Estate. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-muted me-3">Privacy Policy</a>
+                    <a href="#" class="text-muted me-3">Terms of Service</a>
+                    <a href="#" class="text-muted">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Job Portal Modal -->
+    <div class="modal fade" id="jobPortalModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title">Join Our Team</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h4 class="fw-bold">Career Opportunities</h4>
+                            <p class="text-muted">We're looking for talented individuals to join our growing team.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Why Join Us?</h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Competitive compensation</li>
+                                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Professional growth</li>
+                                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Supportive environment</li>
+                                        <li class="mb-2"><i class="fas fa-check text-warning me-2"></i> Cutting-edge tools</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h5 class="fw-bold mb-3">Current Openings</h5>
+                    <div class="accordion" id="jobsAccordion">
+                        <!-- Job 1 -->
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#job1">
+                                    <div>
+                                        <h6 class="mb-1">Real Estate Agent</h6>
+                                        <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> Multiple Locations | <i class="fas fa-briefcase me-1"></i> Full-time</small>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="job1" class="accordion-collapse collapse show" data-bs-parent="#jobsAccordion">
+                                <div class="accordion-body">
+                                    <h6>Responsibilities:</h6>
+                                    <ul class="mb-3">
+                                        <li>Assist clients in buying, selling, and renting properties</li>
+                                        <li>Develop and maintain client relationships</li>
+                                        <li>Market properties effectively</li>
+                                        <li>Stay informed about market trends</li>
+                                    </ul>
+                                    <h6>Requirements:</h6>
+                                    <ul class="mb-3">
+                                        <li>Active real estate license</li>
+                                        <li>2+ years experience preferred</li>
+                                        <li>Excellent communication skills</li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Posted: 1 week ago</small>
+                                        <button class="btn btn-warning btn-sm">Apply Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Job 2 -->
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#job2">
+                                    <div>
+                                        <h6 class="mb-1">Marketing Coordinator</h6>
+                                        <small class="text-muted"><i class="fas fa-map-marker-alt me-1"></i> Remote | <i class="fas fa-briefcase me-1"></i> Full-time</small>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="job2" class="accordion-collapse collapse" data-bs-parent="#jobsAccordion">
+                                <div class="accordion-body">
+                                    <!-- Similar structure as Job 1 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-light mt-4">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Don't see your perfect role?</h5>
+                            <p class="card-text text-muted">We're always interested in talented professionals.</p>
+                            <button class="btn btn-dark">Submit General Application</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-warning back-to-top shadow" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
