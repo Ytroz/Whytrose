@@ -991,12 +991,14 @@ textarea.form-control {
         margin-top: 15px;
         border-radius: 12px;
         box-shadow: var(--box-shadow);
+        color: #3a86ff;
     }
     
     .btn-nav {
         margin-left: 0;
         margin-top: 15px;
         display: inline-block;
+        /* color: #3a86ff; */
     }
     
     .hero-section {
@@ -1030,6 +1032,7 @@ textarea.form-control {
 @media (max-width: 767.98px) {
     .hero-section h1 {
         font-size: 2.5rem;
+        /* color: #3a86ff; */
     }
     
     .hero-section .lead {
@@ -1100,5 +1103,6 @@ textarea.form-control {
     .contact-icon {
         margin-right: 0;
         margin-bottom: 15px;
+        color: #3a86ff;
     }
 }
